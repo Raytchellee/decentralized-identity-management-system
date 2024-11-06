@@ -19,6 +19,7 @@ Explore the live application here: [DIMC - Decentralized Identity Management Sys
 
 - **Node.js**: Make sure you have Node.js installed on your machine.
 - **Yarn**: This project uses Yarn as the package manager. You can install it globally if it's not installed:
+
   ```bash
   npm install -g yarn
 
