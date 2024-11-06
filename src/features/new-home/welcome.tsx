@@ -6,6 +6,7 @@ import { useWallet } from '@txnlab/use-wallet';
 import { useEffect } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { ConnectWalletVisibleAtom } from '@/state';
+import { LogoIcon } from '@/assets/logo.icon';
 
 interface Props {
   onWalletConnect: () => void;
@@ -35,17 +36,18 @@ export const Welcome = ({ onWalletConnect }: Props) => {
         )}
         style={{ boxShadow: '0px 12px 16px -4px #10182814' }}
       >
-        <h1 className="text-2xl font-[600] text-center">Welcome</h1>
+        <LogoIcon className="h-12 mr-3 self-center" />
+        <h1 className="text-2xl font-[600] text-center">D.I.M.C</h1>
         <p className="text-base text-center text-[#8a8a8a] font-[500]">
           Welcome to Decentralized Identity Management Commission. <br />
         </p>
         <p className="text-base text-center text-[#8a8a8a] font-[500]">
-          To proceed, kindly connect your algorand compatible wallet to get your existing DiDs or
-          create a new one. Kindly note that only DiDs created and managed by your account are
-          considered valid
+          To proceed, kindly connect your algorand compatible wallet to get your existing
+          Decentralized Identity (DiD) or create a new one. Kindly note that only DiDs created and
+          managed by your account are considered valid
         </p>
         <Button onClick={() => setWalletConnect(true)} className="mt-[auto]">
-          Connect wallet to get or create your DID
+          Connect wallet
         </Button>
       </div>
     </div>

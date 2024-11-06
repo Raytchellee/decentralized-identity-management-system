@@ -3,6 +3,7 @@
 import { useAuthActions } from '@/actions/auth';
 import { Button } from '../buttons';
 import { useEffect } from 'react';
+import { LogoIcon } from '@/assets/logo.icon';
 
 export const Navbar = () => {
   const { getProfile, disconnectWallet } = useAuthActions();
@@ -17,6 +18,7 @@ export const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           {/* <img src="/path/to/logo.png" alt="Logo" className="h-10 mr-3" /> */}
+          <LogoIcon className="h-10 mr-3" />
           <span className="text-white text-lg font-semibold">
             Decentralized Identity Management
           </span>
