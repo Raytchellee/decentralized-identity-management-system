@@ -56,8 +56,7 @@ This will start the application on `http://localhost:3000`, where you can view i
 
 ## 📦 Built With
 
-- **React** - Frontend framework for building the user interface.
-- **Nest.js** - Node.js framework for scalable and maintainable server-side applications.
+- **Next.js** - Frontend framework for building the user interface.
 - **Algorand** - Blockchain technology for managing DIDs.
 - **DID Protocol** - For decentralized identity management.
 - **Yarn** - Package manager for handling dependencies.
