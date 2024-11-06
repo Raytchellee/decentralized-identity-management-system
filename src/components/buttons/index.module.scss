@@ -1,0 +1,263 @@
+@import '/src/styles/index.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s linear;
+  position: relative;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides any overflow */
+  text-overflow: ellipsis;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.cover {
+  width: 100%;
+}
+
+.loader {
+  margin-left: 9px;
+  color: #27923e;
+  display: flex;
+  align-items: center;
+  position: absolute;
+
+  svg {
+    animation: spin 0.6s infinite linear;
+  }
+}
+
+span.loader-text {
+  opacity: 0.5;
+}
+
+.error {
+  color: rgb(185, 48, 48);
+  font-size: 12px;
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//button sizes
+
+button.large {
+  height: 56px;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+
+  svg {
+    font-size: 28px;
+  }
+}
+
+button.medium {
+  height: 56px;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+
+  svg {
+    font-size: 24px;
+  }
+}
+
+button.small {
+  height: 40px;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+button.xtra-small {
+  height: 24px;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  font-size: 14px;
+
+  svg {
+    font-size: 16px;
+  }
+}
+
+//button variants
+button.solid {
+  background-color: #27923e;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #0b8d4c;
+  }
+
+  &:disabled {
+    background-color: #f2f3f5;
+    color: #8e9ca7;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &:active {
+    background-color: #27923e;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .loader {
+    color: white;
+  }
+}
+
+button.solid-error {
+  background-color: #f1111e;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #c41720;
+  }
+
+  &:disabled {
+    background-color: #f2f3f5;
+    color: #8e9ca7;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &:active {
+    background-color: #d80712;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .loader {
+    color: white;
+  }
+}
+
+button.outlined {
+  background-color: #ffffff;
+  color: #27923e;
+  border: 1px solid #27923e;
+
+  &:hover {
+    background-color: #27923e;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: #f2f3f5;
+    color: #8e9ca7;
+    border: none;
+    cursor: default;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &:active {
+    background-color: #b2cfff;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+button.outlined-error {
+  background-color: #ffffff;
+  color: #f1111e;
+  border: 1px solid #f1111e;
+
+  &:hover {
+    background-color: #f1111e;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: #f2f3f5;
+    color: #8e9ca7;
+    border: none;
+    cursor: default;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &:active {
+    background-color: #b2cfff;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.text {
+  background-color: transparent;
+  border: none;
+  color: #015efc;
+
+  &:hover {
+    background-color: #e5efff;
+  }
+
+  &:disabled {
+    background-color: #f2f3f5;
+    color: #8e9ca7;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &:active {
+    background-color: #b2cfff;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  // &:focus{
+  //     background-color: #FFFFFF;
+  //     border: 5px solid #80AFFF;
+  // }
+}

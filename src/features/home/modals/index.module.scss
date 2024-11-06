@@ -1,0 +1,54 @@
+@import '/src/styles/index.scss';
+
+.container {
+  width: 520px;
+  max-width: calc(100vw - 32px);
+  padding: 32px;
+  gap: 10px;
+  border-radius: 32px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h4 {
+      all: unset;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      color: #171717;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .form_control {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      input {
+        outline: none;
+        padding: 4px 8px;
+        border-radius: 8px;
+        border: 1px solid gray;
+      }
+    }
+
+    textarea {
+      outline: none;
+      padding: 4px 8px;
+      border-radius: 8px;
+      border: 1px solid gray;
+      height: 200px;
+    }
+  }
+}

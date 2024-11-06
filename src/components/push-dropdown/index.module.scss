@@ -1,0 +1,421 @@
+@import '/src/styles/index.scss';
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #101928;
+    padding-bottom: 6px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .inputWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 14px;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+
+    @include tablet {
+      padding: 18px 16px;
+    }
+
+    .placeholder {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #98a2b3;
+      flex: 1;
+    }
+
+    .value {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #101828;
+      flex: 1;
+    }
+
+    .searchInput {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #101828;
+      flex: 1;
+      outline: none;
+      border: none;
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    .icon {
+      color: #667085;
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #f2f4f7;
+    border-radius: 8px;
+    margin-top: 8px;
+    height: 0px;
+    opacity: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #101828;
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f2f4f7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #858585;
+      border-radius: 20px;
+      border: 3px solid #f2f4f7;
+    }
+
+    .row {
+      padding: 6px 14px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+
+      @include tablet {
+        padding: 10px 14px;
+      }
+
+      .text {
+        flex: 1;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #101828;
+        max-height: 24px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        @include tablet {
+          max-height: 24px;
+          font-size: 14px;
+        }
+      }
+
+      &.selected {
+        background: #f9fafb;
+      }
+
+      &:hover {
+        background: #f9fafb;
+      }
+    }
+  }
+}
+
+.closeAnimation {
+  animation-name: slide-up;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.openAnimation {
+  animation-name: slide-down;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+// one entry only
+.closeAnimation1 {
+  animation-name: slide-up-1;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.openAnimation1 {
+  animation-name: slide-down-1;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+// two entries only
+.closeAnimation2 {
+  animation-name: slide-up-2;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.openAnimation2 {
+  animation-name: slide-down-2;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+// three entries only
+.closeAnimation3 {
+  animation-name: slide-up-3;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.openAnimation3 {
+  animation-name: slide-down-3;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+// four entries only
+.closeAnimation4 {
+  animation-name: slide-up-4;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.openAnimation4 {
+  animation-name: slide-down-4;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+// More than 4 entries
+
+@keyframes slide-up {
+  0% {
+    height: 230px;
+    opacity: 1;
+
+    @include tablet {
+      height: 228px;
+    }
+  }
+
+  99% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 230px;
+    opacity: 1;
+
+    @include tablet {
+      height: 228px;
+    }
+  }
+}
+
+// One entry only
+
+@keyframes slide-up-1 {
+  0% {
+    height: 46px;
+    opacity: 1;
+
+    @include tablet {
+      height: 228px;
+    }
+  }
+
+  99% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes slide-down-1 {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 46px;
+    opacity: 1;
+
+    @include tablet {
+      height: 228px;
+    }
+  }
+}
+
+// Two entries only
+
+@keyframes slide-up-2 {
+  0% {
+    height: 92px;
+    opacity: 1;
+
+    @include tablet {
+      height: 228px;
+    }
+  }
+
+  99% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes slide-down-2 {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 92px;
+    opacity: 1;
+
+    @include tablet {
+      height: 228px;
+    }
+  }
+}
+
+// Three entries only
+
+@keyframes slide-up-3 {
+  0% {
+    height: 138px;
+    opacity: 1;
+  }
+
+  99% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes slide-down-3 {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 138px;
+    opacity: 1;
+  }
+}
+
+// Four entries only
+
+@keyframes slide-up-4 {
+  0% {
+    height: 184px;
+    opacity: 1;
+  }
+
+  99% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes slide-down-4 {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 184px;
+    opacity: 1;
+  }
+}

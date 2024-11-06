@@ -1,0 +1,18 @@
+@import '/src/styles/index.scss';
+
+.container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 2px 3px 3px #bfc9ca;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  @include tablet {
+    padding: 20px 80px;
+  }
+}

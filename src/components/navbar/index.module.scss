@@ -1,0 +1,22 @@
+@import '/src/styles/index.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 80px 0 80px;
+  width: 100%;
+
+  .content {
+    width: 936px;
+    max-width: calc(100% - 160px);
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    border: 0.5px solid #d0d5dd;
+    justify-content: space-between;
+    gap: 16px;
+    background: #f9fafb;
+    border-radius: 24px;
+  }
+}

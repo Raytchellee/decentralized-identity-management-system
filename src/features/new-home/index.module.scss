@@ -1,0 +1,34 @@
+@import '/src/styles/index.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  background-image: url(https://res.cloudinary.com/dggbmtpgx/image/upload/v1729606848/BG_zjv7ao.png);
+  background-size: cover;
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 76px 80px;
+    gap: 51px;
+    align-items: center;
+
+    .title {
+      font-size: 64px;
+      text-align: center;
+      color: #2d2a2a;
+      max-width: 940px;
+      font-weight: 600;
+      font-family: Geist;
+      line-height: 80px;
+
+      span {
+        color: #0dac5c;
+      }
+    }
+  }
+}
